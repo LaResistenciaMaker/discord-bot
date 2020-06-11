@@ -6,7 +6,7 @@ const client = new Discord.Client();
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
-    // client.user.setActivity(`En ${client.guilds.size} servidores!`);
+    client.user.setActivity(`En ${client.guilds.size} servidores!`);
 });
 
 client.on('message', msg => {
