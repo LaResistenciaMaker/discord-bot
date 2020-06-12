@@ -8,7 +8,7 @@ Basado en la guía <https://discordjs.guide/>
 >
 > #### (haz pruebas primero copiando el bot y probandolo en tu server):
 >
-> - Clonar el repo
+> - Clonar o forkear el repo
 > - `npm install`
 > - Obtener un token creando un nuevo bot en <https://discord.com/developers/applications>
 > - Crear un archivo `config.json` en el root del repositorio con el siguiente contenido
