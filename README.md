@@ -1,10 +1,26 @@
 # Bot de discord de LR
 
-Basado en la librería [discord.js](https://discord.js.org/)
+Ocupando [discord.js](https://discord.js.org/)
 
-> #### Para colaborar:
+Basado en la guía <https://discordjs.guide/>
+
+> ## Para colaborar:
+>
+> #### (haz pruebas primero copiando el bot y probandolo en tu server):
 >
 > - Clonar el repo
 > - `npm install`
-> - Hacer una nueva branch
-> - Solicitar el archivo config.json en nuestro discord
+> - Obtener un token creando un nuevo bot en <https://discord.com/developers/applications>
+> - Crear un archivo `config.json` en el root del repositorio con el siguiente contenido
+>
+> ```
+> {
+>   "token": 'tu-token-aqui',
+>   "prefix": '>'
+> }
+> ```
+>
+> - Hacer server personal en discord para hacer pruebas
+> - Integra tu nuevo bot a tu server
+> - Hazle cambios
+> - Una vez satisfecho los cambios hacer un pull request a este repo
