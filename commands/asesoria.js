@@ -7,37 +7,37 @@ module.exports = {
             description: 'Haz click a las reacciones para obtener ayuda',
             fields: [{
                     name: 'Arduino',
-                    value: '<:ia:721504571775778866>',
+                    value: '<:arduino:721540923225276456>',
                     inline: true
                 },
                 {
-                    name: 'Electrónica',
-                    value: 'mecanica',
-                    inline: true
-                },
-                {
-                    name: 'Programación',
-                    value: ':cry:',
+                    name: 'Diseño',
+                    value: '<:diseno:721540923363688448>',
                     inline: true
                 },
                 {
                     name: 'Programación',
-                    value: ':cry:',
+                    value: '<:programacion:721540923762409533>',
                     inline: true
                 },
                 {
-                    name: 'Programación',
-                    value: ':cry:',
+                    name: 'Electricidad',
+                    value: '<:electrica:721540923141652492>',
                     inline: true
                 },
                 {
-                    name: 'Programación',
-                    value: ':cry:',
+                    name: 'Negocios',
+                    value: '<:negocios:721540923871199313>',
                     inline: true
                 },
                 {
-                    name: 'Programación',
-                    value: ':cry:',
+                    name: 'Mecánica',
+                    value: '<:mecanica:721540923712077885>',
+                    inline: true
+                },
+                {
+                    name: 'Inteligencia Artificial',
+                    value: '<:ia:721540923774861313>',
                     inline: true
                 },
             ]
@@ -45,33 +45,36 @@ module.exports = {
         message.channel.send({
             embed: embed
         }).then(sentMessage => {
-            sentMessage.react('721504571775778866');
-            sentMessage.react('721504570127155300');
-            sentMessage.react('721504653933543435');
-            sentMessage.react('721504570856964116');
-            sentMessage.react('721504572316712960');
-            sentMessage.react('721504572069249155');
+            sentMessage.react('721540923225276456');
+            sentMessage.react('721540923363688448');
+            sentMessage.react('721540923762409533');
+            sentMessage.react('721540923141652492');
+            sentMessage.react('721540923871199313');
+            sentMessage.react('721540923712077885');
+            sentMessage.react('721540923774861313');
             const filter = (reaction, user) => {
-                return ['ia', 'arduino', '<:electronica:721504653933543435>', '721504570856964116', '721504572316712960', '721504572069249155'].includes(reaction.emoji.name) && user.id === message.author.id;
+                return ['arduino', 'diseno', 'programacion', 'electrica', 'negocios', 'mecanica', 'ia'].includes(reaction.emoji.name) && user.id === message.author.id;
             };
 
             const collector = sentMessage.createReactionCollector(filter, {
-                time: 60000
+                time: 15000
             });
             collector.on('collect', (reaction, user) => {
                 console.log(`Collected ${reaction.emoji.name} from ${user.tag}`);
-                if (reaction.emoji.name === 'ia') {
-                    sentMessage.channel.send('<@&721005283576381490>');
+                if (reaction.emoji.name === 'electrica') {
+                    sentMessage.channel.send('<@&721536452856381440>');
                 } else if (reaction.emoji.name === 'arduino') {
-                    sentMessage.channel.send('<@&721005470239948891>');
-                } else if (reaction.emoji.name === '<:electronica:721504653933543435>') {
-                    sentMessage.channel.send('<@&721005470239948891>');
-                } else if (reaction.emoji.name === '721504570856964116') {
-                    sentMessage.channel.send('<@&721005470239948891>');
-                } else if (reaction.emoji.name === '721504572316712960') {
-                    sentMessage.channel.send('<@&721005470239948891>');
+                    sentMessage.channel.send('<@&721536723351371796>');
+                } else if (reaction.emoji.name === 'diseno') {
+                    sentMessage.channel.send('<@&721536773796134934>');
+                } else if (reaction.emoji.name === 'mecanica') {
+                    sentMessage.channel.send('<@&721536796709617754>');
+                } else if (reaction.emoji.name === 'negocios') {
+                    sentMessage.channel.send('<@&721536814032355328>');
+                } else if (reaction.emoji.name === 'programacion') {
+                    sentMessage.channel.send('<@&721536833573355581>');
                 } else {
-                    sentMessage.channel.send('<@&721005470239948891>');
+                    sentMessage.channel.send('<@&721536857091080232>');
                 }
             });
 
