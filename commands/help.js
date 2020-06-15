@@ -1,7 +1,5 @@
-const {
-    prefix
-} = require('../config.json');
 
+let prefix = process.env.PREFIX;
 module.exports = {
     name: 'help',
     description: 'Comandos e info del bot de LR.',
