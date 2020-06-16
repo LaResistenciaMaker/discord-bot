@@ -11,14 +11,12 @@ Basado en la guía <https://discordjs.guide/>
 > - Clonar o forkear el repo
 > - `npm install`
 > - Obtener un token creando un nuevo bot en <https://discord.com/developers/applications>
-> - Crear un archivo `config.json` en el root del repositorio con el siguiente contenido
->
-> ```
-> {
->   "token": 'tu-token-aqui',
->   "prefix": '>'
-> }
-> ```
+> - Define las variables de entorno, `ENV.PREFIX` y `ENV.TOKEN`
+
+``` bash
+     export PREFIX= "tu prefijo"
+     export TOKEN = "token del bot"
+```
 >
 > - Hacer server personal en discord para hacer pruebas
 > - Integra tu nuevo bot a tu server
