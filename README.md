@@ -13,11 +13,11 @@ Basado en la guía <https://discordjs.guide/>
 > - Obtener un token creando un nuevo bot en <https://discord.com/developers/applications>
 > - Define las variables de entorno, `ENV.PREFIX` y `ENV.TOKEN`
 
-``` bash
-     export PREFIX= "tu prefijo"
+```bash
+     export PREFIX= "<"
      export TOKEN = "token del bot"
 ```
->
+
 > - Hacer server personal en discord para hacer pruebas
 > - Integra tu nuevo bot a tu server
 > - Hazle cambios
