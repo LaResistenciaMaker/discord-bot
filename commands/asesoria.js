@@ -3,6 +3,7 @@ module.exports = {
     aliases: ['a', 'ayuda'],
     async execute(message) {
         let embed = {
+            color: '#5c0a2a',
             title: 'Asesoría/Ayuda',
             description: 'Haz click a las reacciones para obtener ayuda',
             fields: [{
@@ -18,6 +19,11 @@ module.exports = {
                 {
                     name: 'Programación',
                     value: '<:programacion:721540923762409533>',
+                    inline: true
+                },
+                {
+                    name: 'Modelado/impresión 3D',
+                    value: '<:3d:722831879199260683>',
                     inline: true
                 },
                 {
@@ -48,12 +54,13 @@ module.exports = {
             sentMessage.react('721540923225276456');
             sentMessage.react('721540923363688448');
             sentMessage.react('721540923762409533');
+            sentMessage.react('722831879199260683');
             sentMessage.react('721540923141652492');
             sentMessage.react('721540923871199313');
             sentMessage.react('721540923712077885');
             sentMessage.react('721540923774861313');
             const filter = (reaction, user) => {
-                return ['arduino', 'diseno', 'programacion', 'electrica', 'negocios', 'mecanica', 'ia'].includes(reaction.emoji.name) && user.id === message.author.id;
+                return ['arduino', 'diseno', 'programacion', 'electrica', '3d', 'negocios', 'mecanica', 'ia'].includes(reaction.emoji.name) && user.id === message.author.id;
             };
 
             const collector = sentMessage.createReactionCollector(filter, {
