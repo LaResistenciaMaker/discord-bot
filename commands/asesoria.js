@@ -19,8 +19,13 @@ module.exports = {
           inline: true,
         },
         {
-          name: "Programación",
-          value: "<:programacion:721540923762409533>",
+          name: "Frontend",
+          value: "<:frontend:722844235270979664>",
+          inline: true,
+        },
+        {
+          name: "Backend",
+          value: "<:backend:722844234872389684>",
           inline: true,
         },
         {
@@ -57,7 +62,8 @@ module.exports = {
       .then((sentMessage) => {
         sentMessage.react("721540923225276456");
         sentMessage.react("721540923363688448");
-        sentMessage.react("721540923762409533");
+        sentMessage.react("722844235270979664");
+        sentMessage.react("722844234872389684");
         sentMessage.react("722831879199260683");
         sentMessage.react("721540923141652492");
         sentMessage.react("721540923871199313");
@@ -68,7 +74,8 @@ module.exports = {
             [
               "arduino",
               "diseno",
-              "programacion",
+              "frontend",
+              "backend",
               "electrica",
               "3d",
               "negocios",
@@ -89,14 +96,16 @@ module.exports = {
             sentMessage.channel.send("<@&721536723351371796>");
           } else if (reaction.emoji.name === "diseno") {
             sentMessage.channel.send("<@&721536773796134934>");
+          } else if (reaction.emoji.name === "frontend") {
+            sentMessage.channel.send("<@&721536833573355581>");
           } else if (reaction.emoji.name === "mecanica") {
             sentMessage.channel.send("<@&721536796709617754>");
           } else if (reaction.emoji.name === "3d") {
             sentMessage.channel.send("<@&722830356595736656>");
           } else if (reaction.emoji.name === "negocios") {
             sentMessage.channel.send("<@&721536814032355328>");
-          } else if (reaction.emoji.name === "programacion") {
-            sentMessage.channel.send("<@&721536833573355581>");
+          } else if (reaction.emoji.name === "backend") {
+            sentMessage.channel.send("<@&722843778053963887>");
           } else {
             sentMessage.channel.send("<@&721536857091080232>");
           }
