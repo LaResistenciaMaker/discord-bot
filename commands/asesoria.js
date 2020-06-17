@@ -29,7 +29,7 @@ module.exports = {
         {
           name: "Modelado/impresión 3D",
           value: "<:3d:722831879199260683>",
-          inline: false,
+          inline: true,
         },
         {
           name: "Electricidad",
