@@ -4,6 +4,6 @@ module.exports = {
     execute(message, args) {
         console.log(args[0]);
         let guild = message.guild.roles.cache;
-        console.log(guild);
+        message.channel.send(guild);
     }
 }
