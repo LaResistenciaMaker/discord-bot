@@ -76,6 +76,8 @@ module.exports = {
                     sentMessage.channel.send('<@&721536773796134934>');
                 } else if (reaction.emoji.name === 'mecanica') {
                     sentMessage.channel.send('<@&721536796709617754>');
+                } else if (reaction.emoji.name === '3d') {
+                    sentMessage.channel.send('<@&722830356595736656>');
                 } else if (reaction.emoji.name === 'negocios') {
                     sentMessage.channel.send('<@&721536814032355328>');
                 } else if (reaction.emoji.name === 'programacion') {
