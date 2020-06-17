@@ -5,10 +5,8 @@ module.exports = {
     let embed = {
       color: "#5c0a2a",
       title: "Llama a los expertos",
-      description:
-        "Haz click a las reacciones para etiquetar a quienes te pueden ayudar",
-      fields: [
-        {
+      description: "Haz click a las reacciones para etiquetar a quienes te pueden ayudar",
+      fields: [{
           name: "Arduino",
           value: "<:arduino:721540923225276456>",
           inline: true,
@@ -86,7 +84,7 @@ module.exports = {
         };
 
         const collector = sentMessage.createReactionCollector(filter, {
-          time: 15000,
+          time: 42000,
         });
         collector.on("collect", (reaction, user) => {
           console.log(`Collected ${reaction.emoji.name} from ${user.tag}`);
